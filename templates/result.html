@@ -13,9 +13,22 @@
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-size: 16px;
     }
+
+    .centered-div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 </style>
 <body>
-    <h1>Rseult submitted succesfully</h1>
-    <h1>Prediction:<span id="prediction">{{ prediction }}</span></h1>
+
+    <div class="centered-div">
+        <!-- Content goes here -->
+        <h1>Rseult submitted succesfully</h1>
+        <h1>Prediction:<span id="prediction">{{ prediction }}</span></h1>
+    </div>
+    
 </body>
 </html>

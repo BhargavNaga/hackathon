@@ -99,7 +99,13 @@ def result():
     data_test=np.array(data_test).reshape(1,-1)
     prediction=model.predict(data_test) 
     print(prediction)
-    return render_template('result.html',prediction=prediction[0])
+    text=''
+    if prediction[0]==0:
+        text+='No Heart Risk'
+    else:
+        text+='There is Heart Risk'
+
+    return render_template('result.html',prediction=text)
 
 if __name__ == '__main__':
     app.run(debug=True)
